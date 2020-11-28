@@ -1,0 +1,56 @@
+{
+  "name": "py23",
+  "displayName": "py23",
+  "description": "Convert your Python 2.x source code into valid Python 3.x code.",
+  "publisher": "Bruce",
+  "icon": "logo.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knowbee/py23-vscode"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:py23.Convert"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "py23.Convert",
+        "title": "convert your python code"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "py23.Convert",
+        "key": "ctrl+alt+c",
+        "mac": "ctrl+alt+c",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.51.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.9.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.0.2",
+    "vscode-test": "^1.4.0"
+  }
+}
